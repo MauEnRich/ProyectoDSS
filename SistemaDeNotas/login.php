@@ -16,14 +16,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: dashboard.php");
         exit;
     } else {
-        echo "Credenciales incorrectas.";
+        echo "<p style='color: red; text-align: center;'>Credenciales incorrectas.</p>";
     }
 }
 ?>
 
-<form method="post">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="form-login">
     <h2>Iniciar Sesión</h2>
-    Correo: <input type="email" name="email" required><br>
-    Contraseña: <input type="password" name="contraseña" required><br>
-    <button type="submit">Entrar</button>
-</form>
+    <form method="post">
+        <input type="email" name="email" placeholder="Correo electrónico" required><br>
+        <input type="password" name="contraseña" placeholder="Contraseña" required><br>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+</body>
+</html>

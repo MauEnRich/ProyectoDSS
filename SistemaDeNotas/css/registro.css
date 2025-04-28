@@ -1,59 +1,93 @@
-/* Fondo general para registro */
+/* Fondo de la página */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(to right, #006666, #009999);
+    background-color: #006d75; /* Color de fondo teal */
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    font-family: Arial, sans-serif;
 }
 
-.form-registro {
-    background-color: #333;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+/* Caja del formulario */
+.form-register {
+    background-color: #f2f2f2; /* Fondo claro */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
     width: 300px;
     text-align: center;
 }
 
-.form-registro h2 {
-    color: #fff;
+/* Título */
+.form-register h2 {
+    margin-bottom: 30px;
+    color: #006d75; /* Color teal del título */
+}
+
+/* Inputs */
+.form-register input[type="text"],
+.form-register input[type="email"],
+.form-register input[type="password"] {
+    width: 100%;
+    padding: 12px;
     margin-bottom: 20px;
-}
-
-.form-registro input[type="text"],
-.form-registro input[type="email"],
-.form-registro input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
     border: none;
-    border-radius: 20px;
-    background-color: #00a68d;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón */
+.form-register button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006d75;
     color: white;
-    font-size: 14px;
-}
-
-.form-registro input::placeholder {
-    color: #e0e0e0;
-}
-
-.form-registro button {
-    width: 90%;
-    padding: 10px;
     border: none;
-    border-radius: 20px;
-    background-color: #00a68d;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.form-registro button:hover {
-    background-color: #007f66;
+/* Efecto hover en el botón */
+.form-register button:hover {
+    background-color: #00565d;
+}
+
+/* Mensaje general */
+.form-register p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Mensaje de error */
+.form-register .error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Mensaje de éxito */
+.form-register .success {
+    color: green;
+    font-weight: bold;
+}
+
+/* Estilo del enlace "Iniciar sesión" */
+.form-register .success .link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #006d75;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover del enlace "Iniciar sesión" */
+.form-register .success .link:hover {
+    background-color: #00565d;
 }

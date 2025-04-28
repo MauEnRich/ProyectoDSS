@@ -1,24 +1,29 @@
 <?php
 require 'config/db.php';
 
+$mensaje = "";
+$tipoMensaje = "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre = trim($_POST['nombre']);
     $email = trim($_POST['email']);
     $contraseña = $_POST['contraseña'];
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<p style='color: red; text-align: center;'>Correo inválido.</p>";
-        exit;
-    }
+        $mensaje = "❌ Correo inválido.";
+        $tipoMensaje = "error";
+    } else {
+        $hash = password_hash($contraseña, PASSWORD_BCRYPT);
 
-    $hash = password_hash($contraseña, PASSWORD_BCRYPT);
-
-    $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, contraseña) VALUES (?, ?, ?)");
-    try {
-        $stmt->execute([$nombre, $email, $hash]);
-        echo "<p style='color: green; text-align: center;'>Usuario registrado con éxito. <a href='login.php'>Iniciar sesión</a></p>";
-    } catch (PDOException $e) {
-        echo "<p style='color: red; text-align: center;'>Error al registrar: " . htmlspecialchars($e->getMessage()) . "</p>";
+        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, contraseña) VALUES (?, ?, ?)");
+        try {
+            $stmt->execute([$nombre, $email, $hash]);
+            $mensaje = "✅ Usuario registrado con éxito. <a class='link' href='login.php'>Iniciar sesión</a>";
+            $tipoMensaje = "success";
+        } catch (PDOException $e) {
+            $mensaje = "❌ Error al registrar: " . htmlspecialchars($e->getMessage());
+            $tipoMensaje = "error";
+        }
     }
 }
 ?>
@@ -39,6 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="email" name="email" placeholder="Correo electrónico" required><br>
         <input type="password" name="contraseña" placeholder="Contraseña" required><br>
         <button type="submit">Registrarse</button>
+
+        <!-- Mensaje de éxito o error -->
+        <?php if (!empty($mensaje)): ?>
+            <p class="<?php echo $tipoMensaje; ?>"><?php echo $mensaje; ?></p>
+        <?php endif; ?>
     </form>
 </div>
 

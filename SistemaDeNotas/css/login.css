@@ -1,4 +1,4 @@
-/* Fondo de la página */
+
 body {
     margin: 0;
     padding: 0;
@@ -55,9 +55,18 @@ body {
     background-color: #00565d;
 }
 
-/* Mensaje de error */
+/* Mensaje general dentro del formulario */
 .form-login p {
     margin-top: 15px;
-    color: red;
     font-size: 14px;
+}
+
+/* Mensaje de error */
+.form-login .error {
+    color: red;
+}
+
+/* Mensaje de éxito */
+.form-login .success {
+    color: green;
 }

@@ -2,6 +2,8 @@
 require 'config/db.php';
 session_start();
 
+$mensaje = ''; // Creamos variable para mostrar mensaje
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST['email']);
     $contraseña = $_POST['contraseña'];
@@ -16,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: dashboard.php");
         exit;
     } else {
-        echo "<p style='color: red; text-align: center;'>Credenciales incorrectas.</p>";
+        $mensaje = "Credenciales incorrectas.";
     }
 }
 ?>
@@ -36,6 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="email" name="email" placeholder="Correo electrónico" required><br>
         <input type="password" name="contraseña" placeholder="Contraseña" required><br>
         <button type="submit">Entrar</button>
+
+        <?php if (!empty($mensaje)): ?>
+            <p><?php echo htmlspecialchars($mensaje); ?></p>
+        <?php endif; ?>
     </form>
 </div>
 

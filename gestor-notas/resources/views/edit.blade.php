@@ -2,15 +2,16 @@
 <html>
 <head>
     <title>Editar Nota</title>
+    <link rel="stylesheet" href="{{ asset('css/editarNota.css') }}">
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #1e3a8a;">
+<body>
 
-    <div style="max-width: 600px; margin: 50px auto; background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <div class="container">
 
-        <h1 style="text-align: center; margin-bottom: 20px;">✏️ Editar Nota</h1>
+        <h1>✏️ Editar Nota</h1>
 
         @if ($errors->any())
-            <ul style="color: #dc2626; background-color: #fee2e2; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <ul class="errors">
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
@@ -21,40 +22,35 @@
             @csrf
             @method('PUT')
 
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px;">Título:</label>
-                <input type="text" name="titulo" value="{{ old('titulo', $nota->titulo) }}" required
-                       style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px;">
+            <div class="form-group">
+                <label>Título:</label>
+                <input type="text" name="titulo" value="{{ old('titulo', $nota->titulo) }}" required>
             </div>
 
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px;">Contenido:</label>
-                <textarea name="contenido" required
-                          style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; height: 150px;">{{ old('contenido', $nota->contenido) }}</textarea>
+            <div class="form-group">
+                <label>Contenido:</label>
+                <textarea name="contenido" required>{{ old('contenido', $nota->contenido) }}</textarea>
             </div>
 
             @if ($nota->imagen)
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px;">Imagen actual:</label>
-                    <img src="{{ asset('storage/' . $nota->imagen) }}" alt="Imagen actual" style="max-width: 100%; border-radius: 5px;">
+                <div class="form-group">
+                    <label>Imagen actual:</label>
+                    <img src="{{ asset('storage/' . $nota->imagen) }}" alt="Imagen actual" class="imagen-actual">
                 </div>
             @endif
 
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px;">Reemplazar imagen:</label>
-                <input type="file" name="imagen" accept="image/*"
-                       style="padding: 5px; border: 1px solid #cbd5e1; border-radius: 5px;">
+            <div class="form-group">
+                <label>Reemplazar imagen:</label>
+                <input type="file" name="imagen" accept="image/*">
             </div>
 
-            <button type="submit"
-                    style="width: 100%; background-color: #1e3a8a; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer;">
-                💾 Actualizar Nota
-            </button>
+            <button type="submit">💾 Actualizar Nota</button>
         </form>
 
-        <div style="margin-top: 20px; text-align: center;">
-            <a href="{{ route('notas.index') }}" style="text-decoration: none; color: #1e3a8a;">← Volver</a>
+        <div class="back-link">
+            <a href="{{ route('notas.index') }}">← Volver</a>
         </div>
+
     </div>
 
 </body>

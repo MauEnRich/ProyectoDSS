@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.mensaje-exito {
+    color: #16a34a;
+    background-color: #dcfce7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.link-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.separador {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.sin-notas {
+    text-align: center;
+    font-style: italic;
+    color: #1e3a8a;
+}
+
+.nota {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nota-titulo {
+    margin-bottom: 10px;
+}
+
+.nota-contenido {
+    margin-bottom: 10px;
+}
+
+.form-restaurar,
+.form-eliminar {
+    display: inline;
+}
+
+.btn-restaurar {
+    background: none;
+    border: none;
+    color: #059669;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+}

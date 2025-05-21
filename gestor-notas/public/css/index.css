@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo-principal {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.logout-form {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn-cerrar-sesion {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mensaje-exito {
+    color: #16a34a;
+    background-color: #dcfce7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.acciones {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accion-link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #1e3a8a;
+}
+
+.separador {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.nota {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.titulo-nota {
+    margin-bottom: 10px;
+}
+
+.contenido-nota {
+    margin-bottom: 10px;
+}
+
+.imagen-nota {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.acciones-nota {
+    margin-top: 10px;
+}
+
+.editar-link {
+    margin-right: 10px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.form-eliminar {
+    display: inline;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+}
+
+.descargar-pdf {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #0f766e;
+}
+
+.form-favorito {
+    display: inline;
+    margin-left: 10px;
+}
+
+.btn-favorito {
+    background: none;
+    border: none;
+    color: #eab308;
+    cursor: pointer;
+}
+
+.ver-papelera {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ver-papelera a {
+    text-decoration: none;
+    color: #1e3a8a;
+}

@@ -1,0 +1,113 @@
+/* Reset básico y estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.mensaje-exito {
+    color: #16a34a;
+    background-color: #dcfce7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.link-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.separador {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.nota {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nota-titulo {
+    margin-bottom: 10px;
+}
+
+.nota-contenido {
+    margin-bottom: 10px;
+}
+
+.nota-imagen {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.acciones {
+    margin-top: 10px;
+}
+
+.acciones a,
+.acciones button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.accion-editar {
+    margin-right: 10px;
+    color: #2563eb;
+}
+
+.form-eliminar,
+.form-favorito {
+    display: inline;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+}
+
+.accion-pdf {
+    margin-left: 10px;
+    color: #0f766e;
+}
+
+.btn-favorito {
+    background: none;
+    border: none;
+    color: #eab308;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sin-notas {
+    text-align: center;
+    font-style: italic;
+    color: #1e3a8a;
+}

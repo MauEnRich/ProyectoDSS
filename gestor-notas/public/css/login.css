@@ -1,0 +1,72 @@
+/* Reset básico y cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título */
+.login-container h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.login-container button {
+    width: 100%;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Texto de registro */
+.register-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Enlace de registro */
+.register-text a {
+    color: #1e3a8a;
+    text-decoration: none;
+}

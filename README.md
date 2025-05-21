@@ -14,9 +14,10 @@
 - MySQL o MariaDB
 - Laravel 10+
 
-## Instalación (Puedes ejecutar estos comandos en consola)
+## Instalación (Ejecutar los comandos en consola)
 
 ```bash
+Se debe importar la base de datos adjunta en el proyeco
 composer install
 copy .env.example .env
 php artisan key:generate

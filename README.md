@@ -41,11 +41,19 @@
 
 ## Instalación (Ejecutar los comandos en consola)
 
-### 1. Importar la Base de Datos adjunta
+### 1. Instalar dependencias del proyecto
+
+> Clonar el repositorio de manera local o descargar la carpeta comprimida en `.zip`.
+
+```bash
+composer install
+```
+
+### 2. Importar la Base de Datos adjunta
 
 >En el repositorio dentro de la carpeta BD se encuentra el script de respaldo de la Base de Datos.
 
-### 2. Instalar dependencias del proyecto
+### 3. Instalar dependencias del proyecto
 
 > Este comando instala todas las dependencias definidas en el archivo `composer.json`. Es esencial para que Laravel funcione correctamente.
 
@@ -53,7 +61,7 @@
 composer install
 ```
 
-### 3. Crear archivo de entorno
+### 4. Crear archivo de entorno
 
 >Copia `.env.example` a `.env`. Este archivo configura la base de datos y otros parámetros del proyecto.
 
@@ -61,7 +69,7 @@ composer install
 copy .env.example .env
 ```
 
-### 4. Generar clave de aplicación
+### 5. Generar clave de aplicación
 
 >Laravel requiere una clave única para operaciones internas de cifrado. Este comando la genera y la guarda automáticamente en el archivo `.env`.
 
@@ -69,7 +77,7 @@ copy .env.example .env
 php artisan key:generate
 ```
 
-### 5. Crear enlace simbólico a la carpeta storage
+### 6. Crear enlace simbólico a la carpeta storage
 
 >Permite acceder públicamente desde el navegador a los archivos guardados en el almacenamiento, como imágenes subidas.
 
@@ -77,7 +85,7 @@ php artisan key:generate
 php artisan storage:link
 ```
 
-### 6. Ejecutar migraciones de base de datos (opcional pero recomendado)
+### 7. Ejecutar migraciones de base de datos (opcional pero recomendado)
 
 >Crea todas las tablas necesarias en la base de datos utilizando los archivos de migración.
 
@@ -85,7 +93,7 @@ php artisan storage:link
 php artisan migrate
 ```
 
-### 7. Iniciar el servidor de desarrollo
+### 8. Iniciar el servidor de desarrollo
 
 >Inicia un servidor web local. Visita http://localhost:8000/login para ver el proyecto en el navegador.
 

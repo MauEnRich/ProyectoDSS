@@ -41,19 +41,27 @@
 
 ## Instalación (Ejecutar los comandos en consola)
 
-### 1. Instalar dependencias del proyecto
+### 1. Obtener el proyecto
 
 > Clonar el repositorio de manera local o descargar la carpeta comprimida en `.zip`.
 
 ```bash
-composer install
+git clone https://github.com/MauEnRich/ProyectoDSS.git
 ```
 
 ### 2. Importar la Base de Datos adjunta
 
 >En el repositorio dentro de la carpeta BD se encuentra el script de respaldo de la Base de Datos.
 
-### 3. Instalar dependencias del proyecto
+### 3. Acceder al proyecto
+
+> Ir a traves de consola al proyecto.
+
+```bash
+cd gestor_notas
+```
+
+### 4. Instalar dependencias del proyecto
 
 > Este comando instala todas las dependencias definidas en el archivo `composer.json`. Es esencial para que Laravel funcione correctamente.
 
@@ -61,15 +69,15 @@ composer install
 composer install
 ```
 
-### 4. Crear archivo de entorno
+### 5. Crear archivo de entorno
 
->Copia `.env.example` a `.env`. Este archivo configura la base de datos y otros parámetros del proyecto.
+>Copia `.env.example` a `.env`.En este archivo se debe configurar la base de datos del proyecto en especifo de la linea 11-16.
 
 ```bash
 copy .env.example .env
 ```
 
-### 5. Generar clave de aplicación
+### 6. Generar clave de aplicación
 
 >Laravel requiere una clave única para operaciones internas de cifrado. Este comando la genera y la guarda automáticamente en el archivo `.env`.
 
@@ -77,7 +85,7 @@ copy .env.example .env
 php artisan key:generate
 ```
 
-### 6. Crear enlace simbólico a la carpeta storage
+### 7. Crear enlace simbólico a la carpeta storage
 
 >Permite acceder públicamente desde el navegador a los archivos guardados en el almacenamiento, como imágenes subidas.
 
@@ -85,7 +93,7 @@ php artisan key:generate
 php artisan storage:link
 ```
 
-### 7. Ejecutar migraciones de base de datos (opcional pero recomendado)
+### 8. Ejecutar migraciones de base de datos (opcional pero recomendado)
 
 >Crea todas las tablas necesarias en la base de datos utilizando los archivos de migración.
 
@@ -93,7 +101,7 @@ php artisan storage:link
 php artisan migrate
 ```
 
-### 8. Iniciar el servidor de desarrollo
+### 9. Iniciar el servidor de desarrollo
 
 >Inicia un servidor web local. Visita http://localhost:8000/login para ver el proyecto en el navegador.
 

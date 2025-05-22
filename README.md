@@ -21,5 +21,6 @@ Se debe importar la base de datos adjunta en el proyeco
 composer install
 copy .env.example .env (en caso de ser necesario configurarlo para nuestra base)
 php artisan key:generate
+php artisan storage:link
 php artisan migrate (opcional pero recomendado)
 php artisan serve

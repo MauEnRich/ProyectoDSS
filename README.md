@@ -5,7 +5,15 @@
 - **Elías Daniel Rodríguez Franco** – RF230727  
 - **Jonathan Josue Cardoza Perez** – CP230528  
 - **Marlon Osmin Ortiz Carcamo** – OC232936  
-- **Mauricio Enrique Herrera Rico** – HR230334  
+- **Mauricio Enrique Herrera Rico** – HR230334
+
+
+
+# Link a Notion
+
+- **https://www.notion.so/Proyecto-Final-DSS-1e3decf79b44809ab15cdbf2c646f7ff?pvs=4**
+
+
 
 ## Requisitos
 
@@ -13,6 +21,8 @@
 - Composer
 - MySQL o MariaDB
 - Laravel 10+
+
+
 
 ## Instalación (Ejecutar los comandos en consola)
 
